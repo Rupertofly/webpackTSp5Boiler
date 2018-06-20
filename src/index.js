@@ -1,7 +1,6 @@
-import * as sketchHooks from './sketch/main'
+import * as sketchHooks from './sketch/main';
 
 (w =>
   Object.keys(sketchHooks).forEach(hook => {
-    w[hook] = sketchHooks[hook]
-  }))(window)
-console.log('boy')
+    w[hook] = sketchHooks[hook];
+  }))(window);

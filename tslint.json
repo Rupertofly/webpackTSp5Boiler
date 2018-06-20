@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:recommended",
+  //"extends": "tslint:recommended",
   "rules": {
     "space-within-parens": true,
     "no-empty": false,

@@ -1,7 +1,7 @@
 /* tslint:disable:max-classes-per-file member-ordering */
 
 
-declare class p5play {
+ declare class p5play {
   constructor(): void
   /**
    * The sprite's position of the sprite as a vector (x,y).
@@ -654,14 +654,14 @@ declare class p5play {
    * @class Sprite
    * @namespace
    */
-declare class Sprite {
+ declare class Sprite {
   /**
    * The sprite's position of the sprite as a vector (x,y).
    * @property position
      * @type {p5.Vector}
      * @undefined
      */
-  constructor(p5: any, x: number, y: number, width: number, height: number )
+  constructor(p5: any, x: number, y: number, width: number, height: number)
   public position: p5.Vector;
 
   /**
@@ -1003,7 +1003,7 @@ declare class Sprite {
    * @param height {number} Collider height
    * @undefined
    */
-  public setCollider( type: string, offsetX: number, offsetY: number, width: number, height: number ): void;
+  public setCollider(type: string, offsetX: number, offsetY: number, width: number, height: number): void;
 
   /**
    * Returns a the bounding box of the current image
@@ -1022,7 +1022,7 @@ declare class Sprite {
    * @return {number} Current mirroring if no parameter is specified
    * @undefined
    */
-  public mirrorX( dir: number ): number;
+  public mirrorX(dir: number): number;
 
   /**
    * Sets the sprite's vertical mirroring.
@@ -1034,7 +1034,7 @@ declare class Sprite {
    * @return {number} Current mirroring if no parameter is specified
    * @undefined
    */
-  public mirrorY( dir: number ): number;
+  public mirrorY(dir: number): number;
 
   /**
    * Manages the positioning, scale and rotation of the sprite
@@ -1071,7 +1071,7 @@ declare class Sprite {
    * @param y {number} Y component
    * @undefined
    */
-  public setVelocity( x: number, y: number ): void;
+  public setVelocity(x: number, y: number): void;
 
   /**
    * Calculates the scalar speed.
@@ -1095,7 +1095,7 @@ declare class Sprite {
    * @param group {object}
    * @undefined
    */
-  public addToGroup( group: object ): void;
+  public addToGroup(group: object): void;
 
   /**
    * Limits the scalar speed.
@@ -1103,7 +1103,7 @@ declare class Sprite {
    * @param max {number} Max speed: positive number
    * @undefined
    */
-  public limitSpeed( max: number ): void;
+  public limitSpeed(max: number): void;
 
   /**
    * Set the speed and direction of the sprite.
@@ -1116,7 +1116,7 @@ declare class Sprite {
    * @param [angle] {number} Direction in degrees
    * @undefined
    */
-  public setSpeed( speed: number, angle?: number ): void;
+  public setSpeed(speed: number, angle?: number): void;
 
   /**
    * Pushes the sprite in a direction defined by an angle.
@@ -1126,7 +1126,7 @@ declare class Sprite {
    * @param angle {number} Direction in degrees
    * @undefined
    */
-  public addSpeed( speed: number, angle: number ): void;
+  public addSpeed(speed: number, angle: number): void;
 
   /**
    * Pushes the sprite toward a point.
@@ -1136,7 +1136,7 @@ declare class Sprite {
    * @param pointX {number} Direction x coordinate
    * @param pointY {number} Direction y coordinate
    */
-  public attractionPoint( magnitude: number, pointX: number, pointY: number ): void;
+  public attractionPoint(magnitude: number, pointX: number, pointY: number): void;
 
   /**
    * Adds an image to the sprite.
@@ -1156,7 +1156,7 @@ declare class Sprite {
    * @param [img] {p5.Image} Image
    * @undefined
    */
-  public addImage( label: string | p5.Image, img?: p5.Image ): void;
+  public addImage(label: string | p5.Image, img?: p5.Image): void;
 
   /**
    * Adds an animation to the sprite.
@@ -1177,7 +1177,7 @@ declare class Sprite {
    * @param animation {Animation} The preloaded animation
    * @undefined
    */
-  public addAnimation( label: string, animation: Animation ): void;
+  public addAnimation(label: string, animation: Animation): void;
 
   /**
    * Changes the displayed image/animation.
@@ -1186,7 +1186,7 @@ declare class Sprite {
    * @param label {string} Image/Animation identifier
    * @undefined
    */
-  public changeImage( label: string ): void;
+  public changeImage(label: string): void;
 
   /**
    * Returns the label of the current animation
@@ -1203,7 +1203,7 @@ declare class Sprite {
    * @param label {string} Animation identifier
    * @undefined
    */
-  public changeAnimation( label: string ): void;
+  public changeAnimation(label: string): void;
 
   /**
    * Checks if the given point corresponds to a transparent pixel
@@ -1215,7 +1215,7 @@ declare class Sprite {
    * @return {Boolean} result True if non-transparent
    * @undefined
    */
-  public overlapPixel( pointX: number, pointY: number ): boolean;
+  public overlapPixel(pointX: number, pointY: number): boolean;
 
   /**
    * Checks if the given point is inside the sprite's collider.
@@ -1225,7 +1225,7 @@ declare class Sprite {
    * @return {Boolean} result True if inside
    * @undefined
    */
-  public overlapPoint( pointX: number, pointY: number ): boolean;
+  public overlapPoint(pointX: number, pointY: number): boolean;
 
   /**
    * Checks if the the sprite is overlapping another sprite or a group.
@@ -1243,7 +1243,7 @@ declare class Sprite {
    * @return {Boolean} True if overlapping
    * @undefined
    */
-  public overlap( target: object, callback?: (...args: any) => any ): boolean;
+  public overlap(target: object, callback?: (...args: any) => any): boolean;
 
   /**
    * Checks if the the sprite is overlapping another sprite or a group.
@@ -1264,7 +1264,7 @@ declare class Sprite {
    * @return {Boolean} True if overlapping
    * @undefined
    */
-  public collide( target: object, callback?: (...args: any) => any ): boolean;
+  public collide(target: object, callback?: (...args: any) => any): boolean;
 
   /**
    * Checks if the the sprite is overlapping another sprite or a group.
@@ -1285,7 +1285,7 @@ declare class Sprite {
    * @return {Boolean} True if overlapping
    * @undefined
    */
-  public displace( target: object, callback?: (...args: any) => any ): boolean;
+  public displace(target: object, callback?: (...args: any) => any): boolean;
 
   /**
    * Checks if the the sprite is overlapping another sprite or a group.
@@ -1306,7 +1306,7 @@ declare class Sprite {
    * @return {Boolean} True if overlapping
    * @undefined
    */
-  public bounce( target: object, callback?: (...args: any) => any ): boolean;
+  public bounce(target: object, callback?: (...args: any) => any): boolean;
 
 }
 
@@ -1535,7 +1535,7 @@ declare class Group {
      * @return {Boolean} True if any collision/overlap occurred
      * @private
      */
-    private _groupCollide(type: !string, target: object, callback?: ( ...args: any) => any): boolean;
+    private _groupCollide(type: !string, target: object, callback?: (...args: any) => any): boolean;
 
     /**
      * Checks if the the group is overlapping another group or sprite.
@@ -1889,6 +1889,6 @@ declare class SpriteSheet {
      * @param message {!string}
      * @private
      */
-    private _warn(message: !string ): void;
+    private _warn(message: !string): void;
 
   }
