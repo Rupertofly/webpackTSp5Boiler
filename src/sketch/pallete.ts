@@ -1,4 +1,4 @@
-interface colourObj {
+export interface colourObj {
   red: number;
   alpha: number;
   name: string;
