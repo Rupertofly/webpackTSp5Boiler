@@ -9,6 +9,7 @@
     "b-spline": "^2.0.1",
     "ccapture.js": "^1.1.0",
     "d3": "^5.5.0",
+    "d3-weighted-voronoi": "0.0.3",
     "dat.gui": "^0.7.2",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
@@ -36,7 +37,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "build": "npm run clean && webpack -p",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "rchrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=9222"
   },
   "keywords": [
     "bp"
