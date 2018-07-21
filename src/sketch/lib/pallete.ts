@@ -1,4 +1,5 @@
-export interface colourObj {
+// tslint:disable object-literal-sort-keys
+export interface ColourObj {
   red: number;
   alpha: number;
   name: string;
@@ -6,7 +7,7 @@ export interface colourObj {
   green: number;
   hex: string;
 }
-enum hues {
+export enum hues {
   cools,
   warms,
   neutrals,
@@ -23,7 +24,7 @@ enum hues {
   apricots,
   reds
 }
-enum shades {
+export enum shades {
   black,
   dark,
   mediumDark,
@@ -32,7 +33,7 @@ enum shades {
   light,
   white
 }
-const PalleteArray: colourObj[][] = [
+const PalleteArray: ColourObj[][] = [
   [
     {
       red: 0.2117647,
@@ -909,7 +910,7 @@ const PalleteArray: colourObj[][] = [
  * @param name colour name
  * @return colour object, get hex string with hex property
  */
-export function getC(name: string): colourObj;
+export function getC( name: string ): ColourObj;
 
 /**
  * Get Colour frame hue name and shade number
@@ -917,47 +918,59 @@ export function getC(name: string): colourObj;
  * @param shad shade number
  * @return colour object, get hex string with hex property
  */
-export function getC(hue: string, shad: number): colourObj;
+export function getC( hue: string, shad: number ): ColourObj;
 /**
  * Get Colour frame hue number and shade number
  * @param hue hue number
  * @param shad shade number
  * @return colour object, get hex string with hex property
  */
-export function getC(hue: number, shad: number): colourObj;
+export function getC( hue: number, shad: number ): ColourObj;
 /**
  * Get Colour frame hue number and shade name
  * @param hue hue number
  * @param shad shade name
  * @return colour object, get hex string with hex property
  */
-export function getC(hue: number, shad: string): colourObj;
+export function getC( hue: number, shad: string ): ColourObj;
 /**
  * Get Colour frame hue name and shade name
  * @param hue hue name
  * @param shad shade name
  * @return colour object, get hex string with hex property
  */
-export function getC(hue: string, shad: string): colourObj;
+export function getC( hue: string, shad: string ): ColourObj;
 
-export function getC(arg1: string | number, arg2?: string | number): colourObj {
+export function getC( arg1: string | number, arg2?: string | number ): ColourObj {
   let hue;
   let shad;
-  if (typeof arg1 === 'string' && arg2 === null) {
-    for (let v of PalleteArray) {
-      for (let c of v) {
-        if (c.name === arg1) return c;
+  if ( typeof arg1 === 'string' && arg2 === null ) {
+    for ( const v of PalleteArray ) {
+      for ( const c of v ) {
+        if ( c.name === arg1 ) {
+          return c;
+        }
       }
     }
-    throw "can't find colour";
-  } else if (typeof arg1 === 'number' && arg2 === null) throw 'invalid';
-  if (typeof arg1 === 'number') hue = arg1;
-  if (typeof arg2 === 'number') shad = arg2;
-  if (typeof arg1 === 'string' && arg2 !== null) hue = hues[arg1];
-  if (typeof arg2 === 'string') shad = shades[arg2];
+    throw new Error( "can't find colour" );
+  } else if ( typeof arg1 === 'number' && arg2 === null ) {
+    throw new Error( 'invalid' );
+  }
+  if ( typeof arg1 === 'number' ) {
+    hue = arg1;
+  }
+  if ( typeof arg2 === 'number' ) {
+    shad = arg2;
+  }
+  if ( typeof arg1 === 'string' && arg2 !== null ) {
+    hue = hues[arg1];
+  }
+  if ( typeof arg2 === 'string' ) {
+    shad = shades[arg2];
+  }
   try {
     return PalleteArray[hue][shad];
-  } catch (error) {
+  } catch ( error ) {
     throw error;
   }
 }

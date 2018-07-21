@@ -1,6 +1,13 @@
+import * as d3base from 'd3';
 
-export function setup() {}
+import { weightedVoronoi } from 'd3-weighted-voronoi';
+import { random, range } from 'lodash';
 
-export function draw() {}
+export function setup() {
+}
+
+export function draw() {
+
+}
 
 export function mousePressed() {}
