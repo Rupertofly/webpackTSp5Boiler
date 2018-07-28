@@ -5,7 +5,7 @@ declare class CCapture {
 declare const fBufffer: p5.Graphics;
 declare const bBufffer: p5.Graphics;
 
-declare namespace dat {
+declare module 'dat.gui' {
 
 }
 
@@ -17,8 +17,7 @@ declare module 'ccapture.js' {
   }
 }
 
-declare const fBufffer: p5.Graphics;
-declare const bBufffer: p5.Graphics;
+
 declare const drawingContext: CanvasRenderingContext2D;
 declare interface CanvasRenderingContext2D {
   filter: string;
