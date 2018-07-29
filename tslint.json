@@ -3,6 +3,7 @@
   "rules": {
     "space-within-parens": [true, 1],
     "array-bracket-spacing": [true, "always"],
+    "indent": [true,"spaces",4],
 
     "no-empty": false,
     "no-console": false,
@@ -11,7 +12,8 @@
     "unified-signatures": false,
     "no-bitwise": false,
     "curly": [true, "ignore-same-line"],
-    "max-classes-per-file": false
+    "max-classes-per-file": false,
+    "object-literal-sort-keys": false
   }
 }
 
