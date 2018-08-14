@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:Rupertofly/rq-utils.git
+	branch = master
+	commit = 86f96a3b51e5ff53cc2eebe81c25d62d521e776e
+	parent = 3d0d7d7b7a8001170f28b2cc191a6664a9185b49
+	cmdver = 0.3.1
