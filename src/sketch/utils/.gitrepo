@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:Rupertofly/rq-utils.git
 	branch = master
-	commit = 86f96a3b51e5ff53cc2eebe81c25d62d521e776e
-	parent = 3d0d7d7b7a8001170f28b2cc191a6664a9185b49
+	commit = 564fac1403f9764bd437531dc0b569dfd1e4048a
+	parent = c6e401254e10f0d4f312e76b09dc5a9cbaac50b9
 	cmdver = 0.3.1
