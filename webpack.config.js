@@ -11,7 +11,6 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     port: 8080,
-    openPage: '',
     stats: 'errors-only',
     disableHostCheck: true
   },
@@ -45,13 +44,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
       inject: 'body'
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, 'assets'),
-        to: path.resolve(__dirname, 'dist', 'assets')
-      }
-    ])
+    })
   ],
   devtool: 'inline-source-map'
 }
