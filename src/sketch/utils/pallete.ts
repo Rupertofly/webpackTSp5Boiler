@@ -971,7 +971,7 @@ export function getC( arg1: string | hues, arg2?: string | shades ): ColourObj {
     try {
         return PalleteArray[hue][shad];
     } catch ( error ) {
-        throw error;
+        throw new Error( `either hue: ${hue} or shade: ${shad} or out of bounds` );
     }
 }
 /**
@@ -1009,17 +1009,17 @@ export function getNeutrals( hue: neutE, shad: shades ) {
 };
 
 export function lerpHue( t: number, shad: shades ) {
-    const l = t > 1 ? 1 : t < 0 ? 0 : t;
-    Math.floor( t * 15 )
+    let l = t > 1 ? 1 : t < 0 ? 0 : t;
+    l = Math.floor( t * 15 )
     return getC( l, shad );
 }
 export function lerpHueC( t: number, shade: shades ) {
-    const l = t > 1 ? 0.999 : t < 0 ? 0.001 : t;
-    Math.floor( t * 12 )
+    let l = t > 1 ? 0.999 : t < 0 ? 0.001 : t;
+    l = Math.floor( l * 12 )
     return getC( l+3, shade );
 }
 export function lerpShad( t: number, hue: hues ) {
-    const l = t > 1 ? 0.999 : t < 0 ? 0.001 : t;
-    Math.floor( t * 7 );
+    let l = t > 1 ? 0.999 : t < 0 ? 0.001 : t;
+    l = Math.floor( l * 7 );
     return getC( hue, l );
 }
